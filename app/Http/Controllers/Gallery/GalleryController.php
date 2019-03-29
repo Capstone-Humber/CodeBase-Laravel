@@ -36,4 +36,14 @@ class GalleryController extends Controller
         $data['galleries'] = $galleries;
     	return view('gallery.index',$data);
     }
+    
+    public function photo()
+    {
+        //retrieve collection of "gallery" which are active
+        $galleries = $this->galleryRepository->getActive();
+
+        $data['galleries'] = $galleries;
+    	return view('gallery.photo',$data);
+    }
+    
 }

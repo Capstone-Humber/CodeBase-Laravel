@@ -16,6 +16,7 @@
 <script type="text/javascript" src="{{URL::asset('js/popper.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/fb-share.js')}}"></script>
+<script src="{{URL::asset('js/photo-galary.js')}}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {

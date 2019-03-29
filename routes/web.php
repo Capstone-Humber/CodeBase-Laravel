@@ -34,6 +34,7 @@ Route::post("contact","Contact\ContactUsController@store");
 
 Route::get("/gallery","Gallery\GalleryController@index");
 
+Route::get("/photos","Gallery\GalleryController@photo");
 
 Route::group(['prefix' => 'admin'], function () {
 
