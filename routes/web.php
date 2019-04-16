@@ -34,7 +34,12 @@ Route::post("contact","Contact\ContactUsController@store");
 
 Route::get("/gallery","Gallery\GalleryController@index");
 
-Route::get("/photos","Gallery\GalleryController@photo");
+Route::resource("admin/album","AlbumController")->middleware('auth');
+Route::get("album","AlbumController@albumView");
+Route::get("admin/photo-gallary/create/{album_id}","PhotoGalaryController@create")->middleware('auth');
+Route::post("admin/photo-gallary","PhotoGalaryController@store")->middleware('auth');
+
+Route::get("/photos/{album_id}","PhotoGalaryController@photo");
 
 Route::group(['prefix' => 'admin'], function () {
 

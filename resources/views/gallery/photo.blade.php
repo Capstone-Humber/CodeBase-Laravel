@@ -18,9 +18,9 @@
             <div class="demo-gallery">
             <ul id="lightgallery" class="list-unstyled row">
 				@foreach($galleries as $gallery)
-                <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="{{asset($gallery->image->original)}}" data-src="{{asset($gallery->image->original)}}" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+            <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="{{asset('storage/' .$gallery->image)}}" data-src="{{asset('storage/' .$gallery->image)}}" data-sub-html="<h4>{{$gallery->image_title}}</h4><p>{{$gallery->image_description}}</p>">
                     <a href="">
-                        <img class="img-responsive" src="{{asset($gallery->image->original)}}">
+                        <img class="img-responsive" src="{{asset('storage/' . $gallery->image)}}">
                     </a>
                 </li>
 				@endforeach
